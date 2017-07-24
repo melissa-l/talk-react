@@ -1,0 +1,327 @@
+@import '~bootstrap/dist/css/bootstrap.css'
+
+// reset /////////////////////
+*
+  margin 0
+  padding 0
+
+  border 0
+  outline none
+
+h1
+h2
+h3
+h4
+h5
+h6
+  font-weight normal
+
+ol
+ul
+  list-style: none
+// button
+input[type='button']
+input[type='submit']
+input[type='reset']
+button
+
+input[type='number']
+input[type=number]::-webkit-inner-spin-button
+input[type=number]::-webkit-outer-spin-button
+
+select
+textarea
+  appearance none
+  -webkit-appearance:none
+
+input
+  background-color transparent
+
+a,
+a:hover
+  text-decoration none
+///////////////////////////////////
+
+
+// scaffolding //////////////////////////
+*
+*:before
+*:after
+  box-sizing border-box
+
+html
+  font-size 12px
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  -webkit-touch-callout none
+  height: 100%
+body
+  font-size 14px
+  font-family "MicrosoftYaHei","Helvetica Neue","Hiragino Sans GB W3","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif
+  min-height: 100%
+/////////////////////////////////////////////////
+
+// utility /////////////////////////////////////
+clearfix()
+  &:before
+  &:after
+    content ' '
+    display table
+  &:after
+    clear both
+.clearfix
+  clearfix()
+
+.fl
+  float left
+.fr
+  float right
+
+center-block()
+  display block
+  margin-left auto
+  margin-right auto
+.center-block
+  center-block()
+
+center-middle()
+  position absolute
+  top 50%
+  left 50%
+  transform translate3d(-50%, -50%, 0)
+.center-middle
+  center-middle()
+
+text-overflow()
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+
+.hidden
+[hidden]
+  display none !important
+/////////////////////////////////////////
+
+// ui ////////////////////////////
+.icon
+  display inline-block
+  background-size contain
+  background-repeat no-repeat
+  background-position center
+
+label
+  margin: 0
+  font-weight: normal;
+.bold
+  font-weight: bold;
+.inline-block
+  display: inline-block;
+button
+  outline: none!important
+hr
+  border-top: 1px dashed #D8D8E6
+body
+  background-color: #FBFBFB;
+.uppercase
+  text-transform: uppercase;
+
+
+////////bms root
+body
+  height 100%
+  width 100%
+  overflow hidden
+a.a-pointer
+  cursor pointer
+// Tooltip
+.tooltip-approval
+  padding 0 10px
+  max-width 400px
+  word-wrap break-word
+  .last-time
+    display block
+  .sub
+    border-bottom 1px solid #d8d8d8
+    line-height 30px
+    font-weight bold
+  .cont
+    margin-top 10px
+    line-height 24px
+  .btn
+    margin 10px
+
+// placeholder
+input::-webkit-input-placeholder
+textarea::-webkit-input-placeholder
+  color #CDCDDC
+
+.rc-select-dropdown
+  max-height 200px
+  overflow auto
+  z-index 1000
+
+.content-box
+  //对话框 textarea
+  .rk-dialog
+    textarea
+      width 300px
+      height 55px
+      line-height 20px
+      padding 5px 10px
+      margin-bottom 20px
+      resize none
+      border 1px solid #d8d8d8
+  //rc-select
+  .rc-select
+    line-height:34px
+    width 170px
+  .rc-select-arrow
+    height: 30px;
+    background-color inherit
+    right 0
+    border-radius 6px
+
+  .rc-select-selection--single
+    height:34px
+    line-height:34px
+  .rc-select-selection--single .rc-select-selection__rendered
+    height:34px
+    line-height:34px
+  .rc-select-selection--single .rc-select-selection__clear
+    line-height:32px
+    width: 30px;
+    right: 0;
+    background-color: #fff;
+    border-radius: 6px;
+    color #fd982d
+
+  //Bootstrap栅格
+  .form-inline
+    .form-group
+      color:#333333
+      font-size:14px
+      margin-bottom: 15px;
+      margin-right: 15px;
+      >label
+        position relative
+        font-weight:bold
+        width:80px
+        margin-right 10px
+        .asterisk
+          position absolute
+          left -10px
+          top 2px
+
+  //星号
+  .asterisk
+    color #FF5722
+
+  .top
+    padding-right: 20px
+    border-bottom:1px solid #d8d8e8
+    .title-col
+      margin-bottom: 10px
+    h1
+      float:left
+      margin:0
+      height:24px
+      padding-left:10px
+      line-height:24px
+      border-left:3px solid #03A9F4
+      font-size:16px
+      margin: 5px 0
+
+//列表公用样式
+.list-wrap
+  .tab-label
+    margin: 0;
+    position:relative
+    clearfix()
+    .btn
+      position:absolute
+      right:0
+      bottom:-25px
+    li
+      float: left;
+      line-height: 30px;
+      height: 30px;
+      font-size: 14px;
+      padding: 0 12px;
+      cursor: pointer;
+      &:hover
+        background-color: #03A9F4
+        color: #fff;
+      &.active
+        border-bottom: 4px solid #03A9F4
+  .head
+    padding:24px 0
+    background-color: #fff
+    border: 1px solid #d8d8d8
+    margin: 10px 0;
+    .sku-sug
+      width:170px
+    .btn
+      margin:0 10px
+  .op-bar
+    margin 10px 0
+    > *
+      margin-right 20px;
+  .table-head
+    .inline-block
+      margin-right:20px
+      label
+        padding-left:20px
+    >a
+      margin-left:20px
+      margin-bottom:10px
+  .table
+    thead
+      th
+        text-align: center;
+    tbody
+        background-color: #fff
+      tr
+        td,th
+          height: 50px;
+          vertical-align: middle;
+        :last-child
+          text-align: center;
+      .no-result
+        text-align: center;
+        color: #ccc
+        td
+          height: 45px;
+          line-height: 45px;
+
+// 表单
+.form-page
+  .top
+    padding-bottom 10px
+  .form-wrap
+    margin 10px 0
+    padding 20px 0
+    border 1px solid #d8d8d8
+    background-color #fff
+    .show-info
+      margin 0 30px 20px
+      line-height 30px
+      label
+        margin-right 50px
+    .col-block
+      margin-bottom 20px
+      clearfix()
+      .cont
+        padding 0 15px
+      h5
+        font-size 16px
+        line-height 36px
+        margin 0 15px 15px 15px
+        text-indent 15px
+        background-color #f5f5f5
+    .form-group
+      margin 10px 0
+  .bottom-op
+    .btn
+      margin 0 10px
+    .tpl-download
+      height 34px
+      padding 10px 20px 0 10px;
