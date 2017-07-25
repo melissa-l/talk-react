@@ -8,7 +8,7 @@ module.exports = {
     hot: true,
     inline: true,
     contentBase: './app',
-    port: 8080
+    port: 8001
   },
   entry: path.resolve(__dirname, 'app/main.js'),
   output: {
@@ -28,6 +28,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new OpenBrowserPlugin({ url: 'http://localhost:8080' })
+    // new OpenBrowserPlugin({ url: 'http://localhost:8080' })
   ]
 };
